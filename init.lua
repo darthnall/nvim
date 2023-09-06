@@ -20,6 +20,7 @@ local opts = {}
 
 require("lazy").setup("plugins", opts)
 mappings = {
+	a = { "<cmd>Themery<cr>", "Themes" },
 	t = {
 		name = "Terminal",
 		t = { "<cmd>lua NTGlobal['terminal']:toggle()<cr>", "Toggle Terminal" },
@@ -28,8 +29,15 @@ mappings = {
 		name = "Find",
 		t = { "<cmd>Telescope<cr>", "Open Telescope" },
 		f = { "<cmd>Telescope find_files prompt_prefix=🔍<cr>", "Find File" },
+		g = { "<cmd>CarbonNow<cr>", "Save Snippet" },
+	},
+	r = {
+		name = "Icons",
+		r = { "<cmd>IconPickerInsert<cr>", "Open Icon Picker" },
 	},
 }
 
 local wk = require("which-key")
 wk.register(mappings, opts)
+
+vim.cmd('colorscheme brogrammer')

@@ -1,14 +1,14 @@
 require("themery").setup({
-  themes = {{
-    name = "Day",
-    colorscheme = "brogrammer",
-  },
-  {
-    name = "Night",
-    colorscheme = "ayu-dark",
-  }},
+  	themes = {{
+    		name = "Day",
+    		colorscheme = "brogrammer",
+  	},
+  	{
+    		name = "Night",
+    		colorscheme = "ayu-dark",
+  	}},
 })
-
 -- Themery block
-vim.cmd("colorscheme brogrammer")
+-- This block will be replaced by Themery.
+vim.cmd("colorscheme ayu")
 -- end themery block
