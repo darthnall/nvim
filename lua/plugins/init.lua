@@ -1,8 +1,8 @@
 return {	
-	{ 'marciomazza/vim-brogrammer-theme' },
-	{ 'Shatur/neovim-ayu' },
+	{ 'marciomazza/vim-brogrammer-theme', lazy = true },
+	{ 'Shatur/neovim-ayu', lazy = false },
 	{ 'beauwilliams/statusline.lua',
-	dependencies = { 'kosayoda/nvim-lightbulb', },
+	dependencies = { 'kosayoda/nvim-lightbulb', lazy = false },
 	},
 	{ 'ms-jpq/coq_nvim', 
 	branch = "coq",
