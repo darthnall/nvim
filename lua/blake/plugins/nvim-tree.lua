@@ -12,7 +12,7 @@ return {
     opts = { 
         sort_by = "case_insensitive",
         filters = {
-            dotfiles = true,
+            dotfiles = false,
         },
     },
 }
