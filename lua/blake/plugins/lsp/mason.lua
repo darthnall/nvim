@@ -26,16 +26,7 @@ return {
                 "prismals",
                 "pyright",
                 -- DAPs
-                "bash-debug-adapter",
-                "debugpy",
-                "firefox-debug-adapter",
                 -- Linters
-                "jsonlint",
-                "flake8",
-                "pyflakes",
-                "pylint",
-                "sqlfluff",
-                "yamllint",
             },
             automatic_installation = true,
         })

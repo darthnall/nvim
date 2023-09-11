@@ -9,11 +9,5 @@ return {
         -- enable termguicolors for highlight groups
         vim.opt.termguicolors = true
     end,
-    opts = { 
-        sort_by = "case_sensitive",
-        filters = {
-            dotfiles = false,
-        },
-
-    },
+    opts = require("blake.config.nvim-tree.opts"),
 }
