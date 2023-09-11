@@ -1,6 +1,6 @@
 return {
     "s1n7ax/nvim-terminal",
-    cmd = "lua NTGlobal['terminal']:toggle()",
+    keys = "<leader>",
     opts = {
         disable_default_keymaps = true,
     },

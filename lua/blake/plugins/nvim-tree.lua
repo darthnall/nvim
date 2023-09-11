@@ -10,9 +10,10 @@ return {
         vim.opt.termguicolors = true
     end,
     opts = { 
-        sort_by = "case_insensitive",
+        sort_by = "case_sensitive",
         filters = {
             dotfiles = false,
         },
+
     },
 }
