@@ -9,5 +9,5 @@ return {
         -- enable termguicolors for highlight groups
         vim.opt.termguicolors = true
     end,
-    opts = require("blake.config.nvim-tree.opts"),
+    config = function() require("blake.config.nvim-tree.config") end,
 }
