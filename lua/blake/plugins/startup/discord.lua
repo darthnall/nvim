@@ -3,5 +3,5 @@ return {
     lazy = false,
     opts = {
         main_image = "neovim",
-    }
+    },
 }
