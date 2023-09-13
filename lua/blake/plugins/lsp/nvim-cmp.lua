@@ -9,5 +9,5 @@ return {
         "onsails/lspkind.nvim", -- useful snippets
         { "L3MON4D3/LuaSnip", version = "2.*" }, -- snippet engine
     },
-    config = function() require("blake.config.nvim-cmp.config") end,
+    config = function() require("blake.config.nvim-cmp") end,
 }
