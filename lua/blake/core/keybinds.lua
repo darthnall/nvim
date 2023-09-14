@@ -9,4 +9,3 @@ keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find File" 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 -- terminal mode
 keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-
