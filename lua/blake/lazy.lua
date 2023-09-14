@@ -10,7 +10,15 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-local opts = {  }
+local opts = {
+    checker = {
+        enabled = true,
+    },
+    change_detection = {
+        enabled = true,
+        notify = false,
+    },
+}
 require("lazy").setup({
     { import = "blake.plugins" },
     { import = "blake.plugins.startup" },

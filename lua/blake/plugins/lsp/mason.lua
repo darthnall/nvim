@@ -26,6 +26,7 @@ return {
                 "emmet_ls",
                 "prismals",
                 "pyright",
+                "rust_analyzer",
                 -- DAPs
                 -- Linters
             },
