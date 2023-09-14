@@ -6,8 +6,6 @@ return {
         -- disable netrw
         vim.g.loaded_netrw = 1
         vim.g.loaded_netrwPlugin = 1
-        -- enable termguicolors for highlight groups
-        vim.opt.termguicolors = true
     end,
-    config = function() require("blake.config.nvim-tree.config") end,
+    config = function() require("blake.config.nvim-tree") end,
 }

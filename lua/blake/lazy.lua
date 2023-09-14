@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 local opts = {  }
 require("lazy").setup({
+    { import = "blake.plugins" },
+    { import = "blake.plugins.startup" },
     { import = "blake.plugins.lsp" },
-    { import = "blake.plugins.uncategorized" },
 }, opts)
