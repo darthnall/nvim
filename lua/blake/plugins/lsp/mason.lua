@@ -20,15 +20,7 @@ return {
         mason_lspconfig.setup({
             ensure_installed = {
                 -- LSPs
-                "html",
-                "cssls",
                 "lua_ls",
-                "emmet_ls",
-                "prismals",
-                "pyright",
-                "rust_analyzer",
-                -- DAPs
-                -- Linters
             },
             automatic_installation = true,
         })
