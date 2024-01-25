@@ -22,5 +22,4 @@ local opts = {
 require("lazy").setup({
     { import = "blake.plugins" },
     { import = "blake.plugins.startup" },
-    { import = "blake.plugins.lsp" },
 }, opts)

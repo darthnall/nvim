@@ -1,6 +1,6 @@
 return {
     "nvim-tree/nvim-tree.lua",
-    cmd = { "NvimTreeToggle", "NvimTreeRefresh", "NvimTreeCollapse" },
+    event = "BufEnter",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     init = function()
         -- disable netrw
