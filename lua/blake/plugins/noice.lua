@@ -15,5 +15,6 @@ return {
             },
         }
     })
+        vim.keymap.set("n", "<leader>nn", ":Noice dismiss<CR>", { desc = "Clear notifications" })
     end,
 }
