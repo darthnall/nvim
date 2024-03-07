@@ -1,5 +1,7 @@
 local opt = vim.opt
+local g = vim.g
 
+--- Global Options ---
 opt.timeout = true
 opt.timeoutlen = 250
 
@@ -30,3 +32,6 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.swapfile = false
+
+--- Python options ---
+g.python3_host_prog = "/home/blake/.config/nvim/.venv/bin/python"
