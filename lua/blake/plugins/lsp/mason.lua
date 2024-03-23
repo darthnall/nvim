@@ -6,12 +6,7 @@ return {
             "mfussenegger/nvim-dap",
             "rcarriga/nvim-dap-ui",
         },
-		config = function()
-            local mason = require("mason")
-            mason.setup({
-                pip = { upgrade_pip = true },
-            })
-        end,
+		config = true,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -19,11 +14,10 @@ return {
 		opts = {
 			auto_install = true,
             ensure_installed = {
-                "lua_ls",
                 "pyright",
-                "cssmodules_ls",
-                "biome",
-                "vale",
+                "ruff-lsp",
+                "htmx-lsp",
+                "json-lsp",
             },
 		},
 	},
@@ -33,8 +27,15 @@ return {
         event = { "UIEnter *.*" },
         dependiencies = { "williamboman/mason-lspconfig.nvim", },
 		config = function()
+            local on_attach = function(client, bufnr)
+                if client.name == 'ruff_lsp' then
+                    client.server_capabilities.hoverProvider = false
+                end
+            end
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+            lspconfig.tailwindcss.setup({})
 
             --- Lua ---
 			lspconfig.lua_ls.setup({
@@ -50,12 +51,25 @@ return {
 
             --- Python ---
             lspconfig.pyright.setup({
-                capabilities = capabilities,
+                settings = {
+                    pyright = { disableOragnizeImports = true },
+                    python = {
+                        analysis = {
+                            ignore = { "*" },
+                        },
+                    },
+                },
             })
 
-            lspconfig.jsonls.setup({
-                capabilities = capabilities,
+            lspconfig.ruff_lsp.setup({
+                on_attach = on_attach,
             })
+
+            lspconfig.htmx.setup({})
+
+            --- JSON ---
+            lspconfig.jsonls.setup({})
+
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
