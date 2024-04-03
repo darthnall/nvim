@@ -4,67 +4,46 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local hover = null_ls.builtins.hover
 
-local ruff = {
-    name = "ruff",
-    filetypes = { ["python"] = true },
-    methods = {
-        [methods.FORMATTING] = true,
-        [methods.DIAGNOSTICS] = true,
-    },
-    generator = {
-        fn = function()
-            return "I am a ruff!"
-        end,
-    }
-}
+local ruff_format = {
+	filetypes = { "python" },
+	method = methods.FORMATTING,
+	generator = {
+		fn = function()
+			local command = "ruff"
+			local args = { "format" }
 
-local tailwindcss = {
-    name = "tailwindcss",
-    filetypes = {
-        ["html"] = true,
-        ["css"] = true,
-        ["scss"] = true,
-        ["javascript"] = true,
-        ["typescript"] = true
-    },
-    methods = {
-        [methods.FORMATTING] = true,
-        [methods.DIAGNOSTICS] = true,
-        [methods.HOVER] = true,
-    },
-    generator = {
-        fn = function()
-            return "I am a TailwindCSS!"
-        end,
-    }
+			return {
+				command = command,
+				args = args,
+			}
+		end,
+		async = true,
+	},
 }
 
 local sources = {
-    --- Lua ---
-    diagnostics.luacheck,
-    formatting.stylua,
+	--- Lua ---
+	formatting.stylua,
 
-    -- Python
-    ruff,
+	-- Python
+	ruff_format,
 
-    -- TailwindCSS
-    tailwindcss,
+	-- TailwindCSS
 
-    -- Jinja
-    diagnostics.djlint,
+	-- Jinja
+	diagnostics.djlint,
 
-    -- JavaScript / JSON
-    diagnostics.biome,
-    formatting.prettier,
+	-- JavaScript / JSON
+	-- diagnostics.biome,
+	formatting.prettier,
 
-    -- General
-    hover.dictionary,
+	-- General
+	hover.dictionary,
 }
 
 null_ls.setup({
-    sources = sources,
+	sources = sources,
 })
-
 
 vim.keymap.set("n", "<leader>g", vim.lsp.buf.hover, { desc = "Display hover info over cursor" })
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Format current buffer" })

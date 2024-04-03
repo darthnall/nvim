@@ -11,7 +11,5 @@ keymap.set("n", "<leader>k", "<C-w>k", { desc = "Navigate up pane" })
 keymap.set("n", "<leader>l", "<C-w>l", { desc = "Navigate right pane" })
 -- insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-keymap.set("i", "<leader>hh", "h", { desc = "Jump over character to the left" })
-keymap.set("i", "<leader>ll", "l", { desc = "Jump over character to the right" })
 -- terminal mode
 keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode" })

@@ -35,8 +35,6 @@ return {
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            lspconfig.tailwindcss.setup({})
-
             --- Lua ---
 			lspconfig.lua_ls.setup({
 				settings = {
@@ -48,8 +46,7 @@ return {
 				},
 				capabilities = capabilities,
 			})
-
-            --- Python ---
+            --- Python
             lspconfig.pyright.setup({
                 settings = {
                     pyright = { disableOragnizeImports = true },
@@ -60,14 +57,13 @@ return {
                     },
                 },
             })
-
             lspconfig.ruff_lsp.setup({
                 on_attach = on_attach,
             })
 
+            --- Web
             lspconfig.htmx.setup({})
-
-            --- JSON ---
+            lspconfig.tailwindcss.setup({})
             lspconfig.jsonls.setup({})
 
 
