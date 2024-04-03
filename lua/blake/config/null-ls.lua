@@ -1,4 +1,5 @@
 local null_ls = require("null-ls")
+
 local methods = null_ls.methods
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
@@ -22,22 +23,10 @@ local ruff_format = {
 }
 
 local sources = {
-	--- Lua ---
 	formatting.stylua,
-
-	-- Python
 	ruff_format,
-
-	-- TailwindCSS
-
-	-- Jinja
 	diagnostics.djlint,
-
-	-- JavaScript / JSON
-	-- diagnostics.biome,
 	formatting.prettier,
-
-	-- General
 	hover.dictionary,
 }
 
