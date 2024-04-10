@@ -8,13 +8,32 @@ local ruff_format = {
 	filetypes = { "python" },
 	method = methods.FORMATTING,
 	generator = {
-		fn = function()
+		fn = function(bufname)
 			local command = "ruff"
 			local args = { "format" }
 
 			return {
 				command = command,
 				args = args,
+				bufname = bufname,
+			}
+		end,
+		async = true,
+	},
+}
+
+local ruff_lint = {
+	filetypes = { "python" },
+	method = methods.DIAGNOSTICS,
+	generator = {
+		fn = function(bufname)
+			local command = "ruff"
+			local args = { "lint" }
+
+			return {
+				command = command,
+				args = args,
+				bufname = bufname,
 			}
 		end,
 		async = true,
@@ -22,27 +41,20 @@ local ruff_format = {
 }
 
 local sources = {
-	--- Lua ---
 	formatting.stylua,
-
-	-- Python
-	ruff_format,
-
-	-- TailwindCSS
-
-	-- Jinja
 	diagnostics.djlint,
-
-	-- JavaScript / JSON
-	-- diagnostics.biome,
 	formatting.prettier,
-
-	-- General
 	hover.dictionary,
 }
 
 null_ls.setup({
 	sources = sources,
+})
+
+require("null-ls").register({
+	name = "ruff",
+	filetypes = { "python" },
+	sources = { ruff_format },
 })
 
 vim.keymap.set("n", "<leader>g", vim.lsp.buf.hover, { desc = "Display hover info over cursor" })
