@@ -1,6 +1,6 @@
 return {
     "nvim-tree/nvim-tree.lua",
-    event = "BufEnter",
+    lazy = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     init = function()
         -- disable netrw
