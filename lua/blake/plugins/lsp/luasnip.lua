@@ -7,5 +7,5 @@ return {
         "hrsh7th/cmp-nvim-lsp",
     },
     run = "make install_jsregexp",
-    lazy = true,
+    event = { "InsertEnter", "CmdlineEnter" },
 }
