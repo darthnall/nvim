@@ -11,7 +11,6 @@ null_ls.setup({
 	sources = sources,
 })
 
-
 vim.keymap.set("n", "<leader>g", vim.lsp.buf.hover, { desc = "Display hover info over cursor" })
 vim.keymap.set("n", "<leader>gg", vim.lsp.buf.definition, { desc = "Display definition of word on cursor" })
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.rename, { desc = "Rename variable" })

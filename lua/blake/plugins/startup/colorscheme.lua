@@ -5,6 +5,6 @@ return {
 	priority = 1000,
 	config = function()
 		vim.cmd("colorscheme jellybeans-nvim")
-        vim.g.jellybeans_use_term_italics = 1
+		vim.g.jellybeans_use_term_italics = 1
 	end,
 }

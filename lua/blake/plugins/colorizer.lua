@@ -5,13 +5,13 @@ return {
 		"javascript",
 		"lua",
 		"python",
-        html = {
-            mode = "foreground",
-            names=true,
-        },
-        css = {
-            mode = "background",
-            rgb_fn = true,
-        },
+		html = {
+			mode = "foreground",
+			names = true,
+		},
+		css = {
+			mode = "background",
+			rgb_fn = true,
+		},
 	},
 }
