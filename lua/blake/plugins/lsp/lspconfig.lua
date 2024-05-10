@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	event = { "UIEnter" },
+	event = { "VeryLazy" },
 	dependiencies = { "williamboman/mason-lspconfig.nvim" },
 	config = function()
 		local on_attach = function(client, bufnr)

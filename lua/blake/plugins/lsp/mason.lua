@@ -1,9 +1,9 @@
 return {
-    "williamboman/mason.nvim",
-    event = { "InsertEnter", "CmdlineEnter" },
-    config = true,
-    dependencies = {
-        "mfussenegger/nvim-dap",
-        "rcarriga/nvim-dap-ui",
-    },
+	"williamboman/mason.nvim",
+	event = { "VeryLazy" },
+	opts = {},
+	dependencies = {
+		"mfussenegger/nvim-dap",
+		"rcarriga/nvim-dap-ui",
+	},
 }
