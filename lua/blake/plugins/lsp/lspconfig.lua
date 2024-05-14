@@ -3,14 +3,6 @@ return {
 	event = { "VeryLazy" },
 	dependiencies = { "williamboman/mason-lspconfig.nvim" },
 	config = function()
-		local on_attach = function(client, bufnr)
-			if client.name == "ruff_lsp" then
-				client.server_capabilities.hoverProvider = false
-			end
-			if client.name == "ruff" then
-				client.server_capabilities.hoverProvider = false
-			end
-		end
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -28,26 +20,16 @@ return {
 		--- Python
 		lspconfig.pyright.setup({
 			settings = {
-				pyright = { disableOragnizeImports = true },
 				python = {
-					analysis = {
-						ignore = { "*" },
-					},
+					venvPath = ".venv",
 				},
 			},
 		})
-		lspconfig.ruff_lsp.setup({
-			capabilities = capabilities,
-		})
-
 		--- Web
 		lspconfig.htmx.setup({
 			capabilities = capabilities,
 		})
 		lspconfig.tailwindcss.setup({
-			capabilities = capabilities,
-		})
-		lspconfig.jsonls.setup({
 			capabilities = capabilities,
 		})
 

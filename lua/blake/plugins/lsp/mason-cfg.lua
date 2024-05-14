@@ -7,11 +7,8 @@ return {
 		ensure_installed = {
 			"biome",
 			"htmx",
-			"jsonls",
 			"lua_ls",
 			"pyright",
-			"ruff",
-			"ruff_lsp",
 			"tailwindcss",
 		},
 	},
