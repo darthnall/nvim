@@ -21,7 +21,7 @@ return {
 		lspconfig.pyright.setup({
 			settings = {
 				python = {
-					venvPath = ".venv",
+					autoImportCompletions = true,
 				},
 			},
 		})
