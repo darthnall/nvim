@@ -29,5 +29,6 @@ return {
 				)
 			),
 		})
+		ls.add_snippets("")
 	end,
 }
