@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	event = { "VeryLazy" },
+	event = { "InsertEnter" },
 	dependiencies = { "williamboman/mason-lspconfig.nvim" },
 	config = function()
 		local lspconfig = require("lspconfig")

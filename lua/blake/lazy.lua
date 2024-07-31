@@ -18,6 +18,9 @@ local opts = {
 		enabled = true,
 		notify = false,
 	},
+	defaults = {
+		lazy = true,
+	},
 }
 require("lazy").setup({
 	{ import = "blake.plugins" },

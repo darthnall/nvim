@@ -7,7 +7,7 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
 	run = "make install_jsregexp",
-	event = { "InsertEnter", "CmdlineEnter" },
+	event = { "InsertEnter" },
 	config = function()
 		local ls = require("luasnip")
 		local s = ls.snippet

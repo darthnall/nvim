@@ -1,6 +1,6 @@
 return {
 	"numToStr/Navigator.nvim",
-	lazy = true,
+	event = "VeryLazy",
 	opts = {
 		auto_save = nil,
 		disable_on_zoom = false,
