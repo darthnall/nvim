@@ -14,7 +14,7 @@ return {
 				html = { "djlint" },
 				json = { "biome" },
 				lua = { "stylua" },
-				python = { "black", "isort" },
+				python = { "ruff", "isort" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
@@ -22,13 +22,5 @@ return {
 				timeout_ms = 500,
 			},
 		})
-
-		vim.keymap.set({ "n", "v" }, "<leader>gf", function()
-			conform.format({
-				lsp_fallback = true,
-				async = false,
-				timeout_ms = 500,
-			})
-		end, { desc = "Format file or range (in visual mode)" })
 	end,
 }

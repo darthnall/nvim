@@ -18,24 +18,33 @@ return {
 			capabilities = capabilities,
 		})
 		--- Python
-		lspconfig.pyright.setup({
-			settings = {
-				python = {
-					autoImportCompletions = true,
-				},
-			},
+		lspconfig.ruff.setup({
+			cmd = { "ruff", "server", "--preview" },
+			filetypes = { "python" },
 		})
 		--- Web
 		lspconfig.htmx.setup({
 			capabilities = capabilities,
 		})
 		lspconfig.tailwindcss.setup({
-			capabilities = capabilities,
+			settings = {
+				tailwindCSS = {
+					lint = {
+						cssConflict = "warning",
+						invalidApply = "error",
+						invalidConfigPath = "error",
+						invalidScreen = "error",
+						invalidTailwindDirective = "error",
+						invalidVariant = "error",
+						recommendedVariantOrder = "warning",
+					},
+				},
+			},
 		})
 
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-		vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+		-- vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 	end,
 }

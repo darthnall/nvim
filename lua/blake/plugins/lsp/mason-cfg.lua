@@ -8,7 +8,7 @@ return {
 			"biome",
 			"htmx",
 			"lua_ls",
-			"pyright",
+			"ruff",
 			"tailwindcss",
 		},
 	},

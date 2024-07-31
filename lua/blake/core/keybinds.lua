@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- normal mode
+keymap.set("n", "gf", "<C-W>gf", { desc = "Open path in new tab." })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find File" })
 keymap.set("n", "<leader>h", "<C-w>h", { desc = "Navigate left pane" })
