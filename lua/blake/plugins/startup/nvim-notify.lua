@@ -1,6 +1,6 @@
 return {
 	"rcarriga/nvim-notify",
-	lazy = false,
+	lazy = true,
 	opts = {
 		background_colour = "#000000",
 		fps = 60,
