@@ -1,6 +1,6 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
-	event = { "InsertEnter" },
+	event = { "VeryLazy" },
 	dependencies = { "williamboman/mason.nvim" },
 	opts = {
 		auto_install = true,
