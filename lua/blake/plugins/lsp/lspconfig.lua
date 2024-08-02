@@ -19,8 +19,8 @@ return {
 		})
 		--- Python
 		lspconfig.ruff.setup({
-			cmd = { "ruff", "server", "--preview" },
-			filetypes = { "python" },
+            filetypes = { "python" },
+			capabilities = capabilities,
 		})
 		--- Web
 		lspconfig.htmx.setup({
@@ -40,11 +40,7 @@ return {
 					},
 				},
 			},
+			capabilities = capabilities,
 		})
-
-		vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-		-- vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 	end,
 }
