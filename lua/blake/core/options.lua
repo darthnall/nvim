@@ -2,36 +2,29 @@ local opt = vim.opt
 local g = vim.g
 
 --- Global Options ---
+opt.autoindent = true
+opt.background = "dark"
+opt.backspace = "indent,eol,start"
+opt.clipboard:append("unnamedplus")
+opt.expandtab = true
+-- opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- opt.foldmethod = "expr"
+-- opt.foldminlines = 12
+opt.ignorecase = true
+opt.number = true
+opt.relativenumber = true
+opt.shiftwidth = 4
+opt.signcolumn = "yes"
+opt.smartcase = true
+opt.smartindent = true
+opt.splitbelow = true
+opt.splitright = true
+opt.swapfile = false
+opt.tabstop = 4
+opt.termguicolors = true
 opt.timeout = true
 opt.timeoutlen = 250
-
-opt.relativenumber = true
-opt.number = true
-
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-opt.autoindent = true
-
-opt.smartindent = true
-
 opt.wrap = false
 
-opt.ignorecase = true
-opt.smartcase = true
-
-opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
-
-opt.backspace = "indent,eol,start"
-
-opt.clipboard:append("unnamedplus")
-
-opt.splitright = true
-opt.splitbelow = true
-
-opt.swapfile = false
-
---- Python options ---
+--- Python Options ---
 g.python3_host_prog = "/home/blake/.config/nvim/.venv/bin/python"
