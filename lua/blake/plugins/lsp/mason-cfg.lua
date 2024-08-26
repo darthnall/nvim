@@ -1,15 +1,17 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
-	event = { "VeryLazy" },
+    lazy = false,
+    priority = 97,
 	dependencies = { "williamboman/mason.nvim" },
 	opts = {
-		auto_install = true,
 		ensure_installed = {
 			"biome",
 			"htmx",
 			"lua_ls",
 			"ruff",
 			"tailwindcss",
+            "vale_ls",
 		},
+		automatic_installation = true,
 	},
 }
