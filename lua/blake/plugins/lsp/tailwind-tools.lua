@@ -4,18 +4,11 @@ return {
 	ft = { "css", "html", "htmldjango", "javascript", "typescript" },
 	opts = {
 		document_color = {
-			enabled = true,
-			kind = "inline",
 			inline_symbol = " ",
-			debounce = 200,
 		},
 		conceal = {
-			enabled = false,
 			min_length = 8,
 			symbol = "",
-			highlight = {
-				fg = "#388DF8",
-			},
 		},
 	},
 	keys = {
