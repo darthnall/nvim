@@ -1,6 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
-    lazy = false,
+	lazy = false,
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = { theme = "jellybeans" },
 }
