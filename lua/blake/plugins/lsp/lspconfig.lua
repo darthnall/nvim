@@ -1,7 +1,11 @@
 return {
 	"neovim/nvim-lspconfig",
 	event = "VeryLazy",
-	dependiencies = { "williamboman/mason-lspconfig.nvim", "williamboman/mason.nvim" },
+	dependiencies = {
+		"hrsh7th/nvim-cmp",
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+	},
 	config = function()
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()

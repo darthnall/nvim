@@ -7,15 +7,12 @@ return {
 		"rafamadriz/friendly-snippets",
 		"hrsh7th/cmp-nvim-lsp",
 	},
-	run = "make install_jsregexp",
-    opts = {},
+	build = "make install_jsregexp",
+	opts = {
+		update_events = { "TextChanged", "TextChangedI" },
+		region_check_events = { "CursorMoved", "CursorHold", "InsertEnter" },
+	},
 	config = function()
-		local ls = require("luasnip")
-		local s = ls.snippet
-		local t = ls.text_node
-		local i = ls.insert_node
-		local rep = require("luasnip.extras").rep
-		local fmt = require("luasnip.extras.fmt").fmt
-    end,
-
+		require("luasnip.loaders.from_vscode").lazy_load()
+	end,
 }

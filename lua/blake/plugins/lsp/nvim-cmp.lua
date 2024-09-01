@@ -28,22 +28,7 @@ return {
 		sources = require("cmp").config.sources({
 			{ name = "nvim_lsp" },
 			{ name = "luasnip" },
-			{
-				name = "dotenv",
-				option = {
-					path = ".",
-					load_shell = true,
-					item_kind = require("cmp").lsp.CompletionItemKind.Variable,
-					eval_on_confirm = false,
-					show_documentation = true,
-					show_content_on_docs = true,
-					documentation_kind = "markdown",
-					dotenv_environment = ".*",
-					file_priority = function(a, b)
-						return a:upper() < b:upper()
-					end,
-				},
-			},
+			{ name = "dotenv" },
 		}, {
 			{ name = "buffer" },
 		}),
