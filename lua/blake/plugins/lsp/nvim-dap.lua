@@ -1,6 +1,6 @@
 return {
     "mfussenegger/nvim-dap",
-    event = { "VeryLazy" },
+    event = "VeryLazy",
     dependencies = {
         { "ibhagwan/fzf-lua" },
         { "nvim-telescope/telescope-dap.nvim" },

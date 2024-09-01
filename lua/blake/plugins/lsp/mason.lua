@@ -1,7 +1,6 @@
 return {
 	"williamboman/mason.nvim",
-    lazy = false,
-    priority = 98,
+    event = "VeryLazy",
 	dependencies = {
 		"mfussenegger/nvim-dap",
 		"rcarriga/nvim-dap-ui",

@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	event = { "VeryLazy" },
+	event = "VeryLazy",
 	dependiencies = { "williamboman/mason-lspconfig.nvim", "williamboman/mason.nvim" },
 	config = function()
 		local lspconfig = require("lspconfig")
@@ -81,6 +81,10 @@ return {
             },
 			capabilities = capabilities,
 		})
+
+        lspconfig.biome.setup({
+            capabilities = capabilities,
+        })
 
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", {clear = true}),

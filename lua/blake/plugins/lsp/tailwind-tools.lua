@@ -19,7 +19,7 @@ return {
 		},
 	},
 	keys = {
-		{ "<leader>Tt", ":TailwindColorToggle<CR>", mode = "n", desc = "Toggle tailwind colors" },
-		{ "<leader>Ts", ":TailwindSort<CR>", mode = "n", desc = "Sort tailwind classes" },
+		{ "<leader>tt", ":TailwindColorToggle<CR>", mode = "n", desc = "Toggle tailwind colors" },
+		{ "<leader>ts", ":TailwindSort<CR>", mode = "n", desc = "Sort tailwind classes" },
 	},
 }
