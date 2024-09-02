@@ -12,7 +12,4 @@ return {
 		update_events = { "TextChanged", "TextChangedI" },
 		region_check_events = { "CursorMoved", "CursorHold", "InsertEnter" },
 	},
-	config = function()
-		require("luasnip.loaders.from_vscode").lazy_load()
-	end,
 }
