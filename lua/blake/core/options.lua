@@ -7,9 +7,6 @@ opt.background = "dark"
 opt.backspace = "indent,eol,start"
 opt.clipboard:append("unnamedplus")
 opt.expandtab = true
--- opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
--- opt.foldmethod = "expr"
--- opt.foldminlines = 12
 opt.ignorecase = true
 opt.number = true
 opt.relativenumber = true
