@@ -12,7 +12,7 @@ return {
 		},
 	},
 	keys = {
-		{ "<leader>tt", ":TailwindColorToggle<CR>", mode = "n", desc = "Toggle tailwind colors" },
-		{ "<leader>ts", ":TailwindSort<CR>", mode = "n", desc = "Sort tailwind classes" },
+		{ "<leader>tt", "<cmd>TailwindColorToggle<cr>", mode = "n", desc = "Toggle tailwind colors" },
+		{ "<leader>ts", "<cmd>TailwindSort<cr>", mode = "n", desc = "Sort tailwind classes" },
 	},
 }
