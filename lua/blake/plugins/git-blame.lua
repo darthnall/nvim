@@ -5,8 +5,8 @@ return {
 		enabled = false,
 	},
 	keys = {
-		{ "<leader>Gg", "<cmd>GitBlameToggle<cr>", mode = "n", desc = "Toggle git blame" },
-		{ "<leader>Ge", "<cmd>GitBlameEnable<cr>", mode = "n", desc = "Enable git blame" },
-		{ "<leader>Gd", "<cmd>GitBlameDisable<cr>", mode = "n", desc = "Disable git blame" },
+		{ "<leader>Gg", "<cmd>GitBlameToggle<cr>", { "n" }, desc = "Toggle git blame" },
+		{ "<leader>Ge", "<cmd>GitBlameEnable<cr>", { "n" }, desc = "Enable git blame" },
+		{ "<leader>Gd", "<cmd>GitBlameDisable<cr>", { "n" }, desc = "Disable git blame" },
 	},
 }
