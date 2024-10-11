@@ -1,5 +1,7 @@
 return {
 	"altermo/ultimate-autopair.nvim",
-	event = { "InsertEnter", "CmdlineEnter" },
-	opts = {},
+	event = "InsertEnter",
+	opts = {
+		cmap = false,
+	},
 }
