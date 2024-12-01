@@ -1,3 +1,4 @@
+-- Directory navigation and file manipulation
 return {
 	"stevearc/oil.nvim",
 	lazy = false,

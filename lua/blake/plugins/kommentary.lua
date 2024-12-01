@@ -1,3 +1,4 @@
+-- Comments out lines
 return {
 	"b3nj5m1n/kommentary",
 	event = "VeryLazy",

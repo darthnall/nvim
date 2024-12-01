@@ -1,3 +1,4 @@
+-- Inline git blame
 return {
 	"f-person/git-blame.nvim",
 	event = "VeryLazy",

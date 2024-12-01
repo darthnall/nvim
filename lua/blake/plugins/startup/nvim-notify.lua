@@ -1,3 +1,4 @@
+-- Makes notifications show up in floating windows inside of cli
 return {
 	"rcarriga/nvim-notify",
 	event = "VeryLazy",

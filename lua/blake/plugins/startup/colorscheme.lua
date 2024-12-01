@@ -1,3 +1,4 @@
+-- Very colorful colorscheme
 return {
 	"metalelf0/jellybeans-nvim",
 	dependencies = { "nvim-lualine/lualine.nvim", "rktjmp/lush.nvim" },
