@@ -24,4 +24,4 @@ opt.timeoutlen = 250
 opt.wrap = false
 
 --- Python Options ---
-g.python3_host_prog = "/home/blake/.config/nvim/.venv/bin/python"
+g.python3_host_prog = vim.fn.expand("$HOME/.config/nvim/.venv/bin/python3")
