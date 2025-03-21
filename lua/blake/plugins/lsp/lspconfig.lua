@@ -30,17 +30,7 @@ return {
 			capabilities = capabilities,
 		})
 
-		lspconfig.pyright.setup({
-			settings = {
-				pyright = {
-					disableOrganizeImports = true,
-				},
-			},
-			python = {
-				analysis = {
-					ignore = { "*" },
-				},
-			},
+		lspconfig.basedpyright.setup({
 			capabilities = capabilities,
 		})
 

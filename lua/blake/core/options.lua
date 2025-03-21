@@ -1,5 +1,4 @@
 local opt = vim.opt
-local g = vim.g
 
 --- Global Options ---
 opt.autoindent = true
@@ -8,6 +7,7 @@ opt.backspace = "indent,eol,start"
 opt.clipboard:append("unnamedplus")
 opt.expandtab = true
 opt.ignorecase = true
+opt.laststatus = 3
 opt.number = true
 opt.relativenumber = true
 opt.shiftwidth = 4
@@ -21,7 +21,5 @@ opt.tabstop = 4
 opt.termguicolors = true
 opt.timeout = true
 opt.timeoutlen = 250
+opt.updatetime = 200
 opt.wrap = false
-
---- Python Options ---
-g.python3_host_prog = vim.fn.expand("$HOME/.config/nvim/.venv/bin/python3")

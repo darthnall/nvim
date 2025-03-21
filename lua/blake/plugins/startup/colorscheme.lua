@@ -1,11 +1,10 @@
 -- Very colorful colorscheme
 return {
-	"metalelf0/jellybeans-nvim",
-	dependencies = { "nvim-lualine/lualine.nvim", "rktjmp/lush.nvim" },
+	"https://gitlab.com/bartekjaszczak/finale-nvim",
+	dependencies = { { "nvim-lualine/lualine.nvim", opts = { theme = "finale" } } },
 	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.cmd("colorscheme jellybeans-nvim")
-		vim.g.jellybeans_use_term_italics = 1
+		vim.cmd.colorscheme("finale")
 	end,
 }
