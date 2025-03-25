@@ -32,6 +32,11 @@ return {
 
 		lspconfig.basedpyright.setup({
 			capabilities = capabilities,
+			python = {
+				analysis = {
+					ignore = { "*" },
+				},
+			},
 		})
 
 		lspconfig.ruff.setup({
