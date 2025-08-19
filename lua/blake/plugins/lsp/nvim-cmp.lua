@@ -6,7 +6,6 @@ return {
 		"hrsh7th/cmp-cmdline",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-buffer",
-		"SergioRibera/cmp-dotenv",
 	},
 	opts = {
 		snippet = {
@@ -29,7 +28,6 @@ return {
 		sources = require("cmp").config.sources({
 			{ name = "nvim_lsp" },
 			{ name = "luasnip" },
-			{ name = "dotenv" },
 		}, {
 			{ name = "buffer" },
 		}),

@@ -1,21 +1,17 @@
 return {
 	"neovim/nvim-lspconfig",
 	event = "VeryLazy",
-	dependiencies = {
-		"hrsh7th/nvim-cmp",
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-	},
+	dependiencies = { "hrsh7th/nvim-cmp" },
 	opts = {},
 	config = function()
-		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		lspconfig.htmx.setup({
+		vim.lsp.config("htmx", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable("htmx")
 
-		lspconfig.lua_ls.setup({
+		vim.lsp.config("lua_ls", {
 			settings = {
 				Lua = {
 					diagnostics = {
@@ -25,12 +21,14 @@ return {
 			},
 			capabilities = capabilities,
 		})
+		vim.lsp.enable("lua_ls")
 
-		lspconfig.tailwindcss.setup({
+		vim.lsp.config("tailwindcss", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable("tailwindcss")
 
-		lspconfig.basedpyright.setup({
+		vim.lsp.config("basedpyright", {
 			capabilities = capabilities,
 			python = {
 				analysis = {
@@ -38,16 +36,16 @@ return {
 				},
 			},
 		})
+		vim.lsp.enable("basedpyright")
 
-		lspconfig.ruff.setup({
+		vim.lsp.config("ruff", {
 			init_options = {
 				settings = {
 					configurationPreference = "filesystemFirst",
-					lineLength = 88,
+					lineLength = 79,
 					fixAll = true,
 					organizeImports = true,
 					showSyntaxErrors = true,
-					logLevel = "debug",
 					codeAction = {
 						disableRuleComment = {
 							enable = true,
@@ -68,10 +66,12 @@ return {
 			},
 			capabilities = capabilities,
 		})
+		vim.lsp.enable("ruff")
 
-		lspconfig.biome.setup({
+		vim.lsp.config("biome", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable("biome")
 
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", { clear = true }),
@@ -86,5 +86,6 @@ return {
 			end,
 			desc = "LSP: Disable hover capability from Ruff",
 		})
+		vim.lsp.set_log_level("off")
 	end,
 }
