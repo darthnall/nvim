@@ -23,7 +23,7 @@ local opts = {
 	},
 }
 require("lazy").setup({
-	{ import = "blake.plugins" },
-	{ import = "blake.plugins.startup" },
-	{ import = "blake.plugins.lsp" },
+	{ import = "darthnall.plugins" },
+	{ import = "darthnall.plugins.startup" },
+	{ import = "darthnall.plugins.lsp" },
 }, opts)

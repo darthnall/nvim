@@ -1,2 +1,2 @@
-require("blake.core")
-require("blake.lazy")
+require("darthnall.core")
+require("darthnall.lazy")
