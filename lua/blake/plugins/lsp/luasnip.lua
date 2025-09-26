@@ -1,6 +1,6 @@
 return {
 	"L3MON4D3/LuaSnip",
-	event = "VeryLazy",
+	event = "InsertEnter",
 	dependencies = {
 		"hrsh7th/nvim-cmp",
 		"saadparwaiz1/cmp_luasnip",
