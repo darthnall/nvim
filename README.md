@@ -1,1 +1,1 @@
-# nvim
+# darthnall's nvim configuration
