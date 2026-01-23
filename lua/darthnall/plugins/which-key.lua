@@ -48,7 +48,7 @@ return {
 		{
 			"<leader>?",
 			function()
-				require("lua.blake.plugins.which-key").show({ global = false })
+				require("lua.darthnall.plugins.which-key").show({ global = false })
 			end,
 			desc = "Buffer Local Keymaps (which-key)",
 		},
