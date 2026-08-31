@@ -1,9 +1,18 @@
 return {
 	"neovim/nvim-lspconfig",
+	dependencies = {
+		{ "ms-jpq/coq_nvim", branch = "coq" },
+		{ "ms-jpq/coq.artifacts", branch = "artifacts" },
+	},
 	event = "VeryLazy",
 	opts = {},
 	config = function()
-		vim.lsp.config("basedpyright", {})
+		vim.lsp.config("basedpyright", {
+			settings = {
+				disableLanguageServices = true,
+				autoImportCompletions = true,
+			},
+		})
 		vim.lsp.config("ruff", {})
 		vim.lsp.config("lua_ls", {
 			settings = {

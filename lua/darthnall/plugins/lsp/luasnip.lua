@@ -7,9 +7,11 @@ return {
 		"rafamadriz/friendly-snippets",
 		"hrsh7th/cmp-nvim-lsp",
 	},
+	version = "v2.5.*",
 	build = "make install_jsregexp",
-	opts = {
-		update_events = { "TextChanged", "TextChangedI" },
-		region_check_events = { "CursorMoved", "CursorHold", "InsertEnter" },
-	},
+	opts = {},
+	config = function()
+		require("luasnip.loaders.from_vscode").lazy_load()
+		require("luasnip.loaders.from_snipmate").lazy_load({ paths = { "./snippets" } })
+	end,
 }

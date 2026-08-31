@@ -52,5 +52,20 @@ return {
 			end,
 			desc = "Buffer Local Keymaps (which-key)",
 		},
+		{
+			"<leader>gD",
+			"<cmd>lua vim.lsp.buf.declaration()<CR>",
+			desc = "Jump to declaration",
+		},
+		{
+			"<leader>gd",
+			"<cmd>lua vim.lsp.buf.definition()<CR>",
+			desc = "Jump to definition",
+		},
+		{
+			"<leader>rn",
+			"<cmd>lua vim.lsp.buf.rename()<CR>",
+			desc = "LSP Rename",
+		},
 	},
 }
